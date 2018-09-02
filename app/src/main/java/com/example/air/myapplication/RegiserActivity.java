@@ -40,7 +40,7 @@ public class RegiserActivity extends AppCompatActivity {
         regiserUserReq.setEmail(email);
         regiserUserReq.setMobile(tel);
 
-        String url = "";
+        String url = "http://192.168.13.1:8099/sys/regier";
         AirResult airResult = HttpClient.post(url, regiserUserReq, AirResult.class);
 
         if (airResult!=null && airResult.getStatus() == 200){
